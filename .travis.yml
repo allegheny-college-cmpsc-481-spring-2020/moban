@@ -17,7 +17,7 @@ stages:
   - test
 
 .disable_global: &disable_global
-  addons: false
+  addons: true
   cache: false
   env: {}
   python: false
@@ -28,7 +28,7 @@ stages:
   after_success: false
   after_failure: false
   before_deploy: false
-  deploy: false
+  deploy: true
 
 .lint: &lint
   <<: *disable_global
